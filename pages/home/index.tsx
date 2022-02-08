@@ -1,11 +1,16 @@
 import Image from 'next/image'
 
-import { ContainerHome } from '../../styles/pages/Home'
+import { ContainerHome, LeftContent, RightContent } from '../../styles/pages/Home'
+
+import Stories from '../../components/Stories'
 
 const Home = () => {
   return (
     <ContainerHome>
-      home
+      <LeftContent>
+        <Stories />
+      </LeftContent>
+      <RightContent>dasdas</RightContent>
     </ContainerHome>
   )
 }
