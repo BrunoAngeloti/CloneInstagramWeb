@@ -1,6 +1,8 @@
 import Image from 'next/image'
 
-import { ContainerHome, LeftContent, RightContent } from '../../styles/pages/Home'
+import ImagePerfil from '../../components/ImagePerfil'
+
+import { ContainerHome, LeftContent, RightContent, Perfil, InfoPerfil } from '../../styles/pages/Home'
 
 import Stories from '../../components/Stories'
 
@@ -10,7 +12,15 @@ const Home = () => {
       <LeftContent>
         <Stories />
       </LeftContent>
-      <RightContent>dasdas</RightContent>
+      <RightContent>
+        <Perfil>
+        <ImagePerfil/>
+          <InfoPerfil>
+            <h1>bruno_angeloti</h1>
+            <h2>Bruno Angeloti Pires</h2>
+          </InfoPerfil>
+        </Perfil>
+      </RightContent>
     </ContainerHome>
   )
 }

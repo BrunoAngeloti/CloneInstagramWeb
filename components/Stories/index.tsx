@@ -3,10 +3,12 @@ import { useState } from 'react'
 
 import { ContainerStories, Profile, Button } from './style'
 
+import ImagePerfil from '../ImagePerfil'
+
 const data = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]
 
 const Stories = () => {
-  const constantMove = 305
+  const constantMove = 320
   const constantStoriesOnScreen = 8
   const [move, setMove] = useState(0)
   const [control, setControl] = useState(constantStoriesOnScreen)
@@ -18,7 +20,11 @@ const Stories = () => {
       setMove(move+constantMove)
       setControl(control-4)
     }else{
-      setMove(move+((constantMove/4)*result))
+      const resultSub = ((move+((constantMove/4)*result)) - 30)
+      if(resultSub === 0)
+        setMove(resultSub)
+      else
+        setMove(((move+((constantMove/4)*result)) - (30 - resultSub)))
       setControl(control-result)
     }
   }
@@ -30,7 +36,7 @@ const Stories = () => {
       setMove(move-constantMove)
       setControl(control+4)
     }else{
-      setMove(move-((constantMove/4)*result))         
+      setMove((move-((constantMove/4)*result)) + 30)         
       setControl(control+result)
     }
   }
@@ -42,7 +48,7 @@ const Stories = () => {
       </Button>
       {data.map(data => (
         <Profile key={data} move={move}>
-          <Image src="/imagePerfil.jpg" width={56} height={56} alt="imagem do perfil"/>
+          <ImagePerfil />
           <span>brunoangeloti</span>
         </Profile>
       ))}    

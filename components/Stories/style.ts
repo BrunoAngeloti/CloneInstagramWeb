@@ -18,7 +18,7 @@ export const ContainerStories = styled.div`
 export const Profile = styled.div<{ move?: number }>`
   display: flex;
   flex-direction: column;
-  max-width: 56px; 
+  max-width: 60px; 
   transition: 0.5s;
   transform: translateX(${props => props.move}px);
   
@@ -27,11 +27,6 @@ export const Profile = styled.div<{ move?: number }>`
     overflow: hidden;
     white-space: nowrap;
     font-size: 12px;
-  }
-  img{
-    border-radius: 50%;
-    border: 2px solid #CB2C8A !important;
-    padding: 2px !important;
   }
 `
 

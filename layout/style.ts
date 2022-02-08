@@ -5,5 +5,5 @@ export const ContentLayout = styled.main`
   width: 100%;
   justify-content: center;
   background-color: #FAFAFA;
-  padding-top: 20px;
+  padding-top: 30px;
 `
