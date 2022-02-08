@@ -9,7 +9,7 @@ export const ContainerHome = styled.main`
 
 export const LeftContent = styled.div`
   display: flex;
-  min-width: 65%;
+  max-width: 65%;
   background-color: aqua;
   
 `
